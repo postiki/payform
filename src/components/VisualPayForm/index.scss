@@ -1,0 +1,85 @@
+.visualpayform{
+  max-width: 298px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 56px;
+
+  padding: 23px 35px;
+  margin: 80px 0px;
+
+  box-shadow: 0px 0px 55px rgba(61, 127, 255, 0.56);
+  background-color: #3D7FFF;
+  background-image: url(../../icons/world.svg), linear-gradient(72.12deg, #3067D2 0.56%, #3674EC 64.26%, #699CFF 100%);;
+
+
+  border-radius: 20px;
+
+  color: white;
+  text-align: center;
+
+  h1{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    margin: 0px 0px;
+  }
+  h6{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    margin: 0px 0px;
+  }
+
+  .visualpayform__logo{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .visualpayform__data{
+    height: 75px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .visualpayform__cardnumber{
+      h1{
+        letter-spacing: 0.278em;
+        font-weight: 700;
+      }
+    }
+
+    .visualpayform__altdata{
+      display: flex;
+      justify-content: space-between;
+
+      .visualpayform__holder{
+
+      }
+      .visualpayform__expiresandcvv{
+        max-width: 117px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        .visualpayform__expires{
+
+        }
+
+        .visualpayform__cvv{
+
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 415px) {
+    margin: 40px 0px;
+  }
+  @media screen and (min-width: 427px) {
+    margin: 120px 0px;
+  }
+}
