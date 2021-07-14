@@ -47,11 +47,24 @@ function App() {
 
     return (
         <div className='window'>
-            {hideCards && <Back/>}
+
             {showTrue && <TrueC/>}
             {showFalse && <FalseC />}
-            {hideCards && <VisualPayForm numb={cardNumb} my={cardMY} cvv={cardCvv}/>}
-            {hideCards && <PayForm number={number} my={my} cvv={cvv} validation={validation}/>}
+            <div className='first'>
+                {hideCards && <Back/>}
+                {hideCards && <VisualPayForm numb={cardNumb} my={cardMY} cvv={cardCvv}/>}
+                <div className='down'>
+                    <h1>Работает на платформе <b>MaxPay</b></h1>
+                    <h6>Совершая перевод вы соглашаетесь с <b>локальными актами</b> платформы</h6>
+                </div>
+
+            </div>
+            <div className='second'>
+                <div className='head'>
+                    <p>ПОДТВЕРЖДЕНИЕ ПЛАТЕЖА</p>
+                </div>
+                {hideCards && <PayForm number={number} my={my} cvv={cvv} validation={validation}/>}
+            </div>
             <Footer />
         </div>
     );

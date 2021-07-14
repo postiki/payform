@@ -24,13 +24,11 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 21px;
-    margin: 0px 0px;
   }
   h6{
     font-size: 13px;
     font-weight: 500;
     line-height: 13px;
-    margin: 0px 0px;
   }
 
   .visualpayform__logo{
@@ -76,6 +74,61 @@
       }
     }
   }
+
+  @media screen and (min-width: 429px) {
+    max-width: 500px;
+
+    gap: 71px;
+
+    padding: 46px 52px;
+
+
+    h1{
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 34px;
+    }
+    h6{
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+
+    .visualpayform__logo{
+      .logo{
+        width: 206px;
+      }
+      .master{
+        width: 68px;
+      }
+    }
+
+    .visualpayform__data{
+      height: 130px;
+
+      .visualpayform__cardnumber{
+        h1{
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 46px;
+          letter-spacing: 0.141em;
+        }
+      }
+
+      .visualpayform__altdata{
+
+        .visualpayform__holder{
+          display: none;
+        }
+
+        .visualpayform__expiresandcvv{
+          max-width: none;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 415px) {
     margin: 40px 0px;
   }

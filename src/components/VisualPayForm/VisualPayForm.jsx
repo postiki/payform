@@ -8,8 +8,8 @@ export default function VisualPayForm ( {numb, cvv, my} ) {
     return (
         <div className='visualpayform'>
             <div className='visualpayform__logo'>
-                <img src={logo} />
-                <img src={mb} />
+                <img className='logo' src={logo} />
+                <img className='master' src={mb} />
             </div>
             <div className='visualpayform__data'>
                 <div className='visualpayform__cardnumber'>

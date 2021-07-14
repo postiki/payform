@@ -1,8 +1,8 @@
 .back{
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 32px;
   padding-top: 33px;
 
   img{
@@ -17,6 +17,25 @@
     width: 100%;
 
     color: #3C3C3C;
+  }
+
+  @media screen and (min-width: 429px) {
+
+    display: flex;
+    padding: 0px 0px;
+    width: auto;
+
+    img{
+      height: 44px;
+      padding-right: 40px;
+    }
+
+    h1{
+      font-size: 28px;
+      line-height: 32px;
+
+      max-width: 509px;
+    }
   }
   @media screen and (max-width: 376px){
     left: 7px;
