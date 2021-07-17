@@ -8,6 +8,8 @@ import Footer from "./components/Footer/Footer";
 import TrueC from "./components/True/True";
 import FalseC from "./components/False/False";
 
+import logo from "./icons/logo.svg"
+
 
 function App() {
 
@@ -47,23 +49,22 @@ function App() {
 
     return (
         <div className='window'>
-
-            {showTrue && <TrueC/>}
-            {showFalse && <FalseC />}
-            <div className='first'>
-                {hideCards && <Back/>}
+            <div className='first' >
+                <Back hideCards={hideCards}/>
+                {showTrue && <TrueC/>}
+                {showFalse && <FalseC />}
                 {hideCards && <VisualPayForm numb={cardNumb} my={cardMY} cvv={cardCvv}/>}
                 <div className='down'>
                     <h1>Работает на платформе <b>MaxPay</b></h1>
-                    <h6>Совершая перевод вы соглашаетесь с <b>локальными актами</b> платформы</h6>
+                    {hideCards && <h6>Совершая перевод вы соглашаетесь с <b>локальными актами</b> платформы</h6>}
                 </div>
-
             </div>
             <div className='second'>
-                <div className='head'>
+                {hideCards && <div className='head'>
                     <p>ПОДТВЕРЖДЕНИЕ ПЛАТЕЖА</p>
-                </div>
+                </div>}
                 {hideCards && <PayForm number={number} my={my} cvv={cvv} validation={validation}/>}
+                {!hideCards && <img className='logomain' src={logo}/>}
             </div>
             <Footer />
         </div>
